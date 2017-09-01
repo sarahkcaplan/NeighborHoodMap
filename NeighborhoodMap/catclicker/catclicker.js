@@ -1,10 +1,4 @@
 $(function(){
-
-  var model = {
-    init: function(){
-      //not sure what to init
-    }
-  },
   var catArray = [{
     name: 'Bella',
     clickCount: 0
@@ -25,18 +19,38 @@ $(function(){
     clickCount: 0
     imageUrl:'images/Tyler.jpg'
   }
-  ]
-})
+  ];
+
+  var octopus = {
+    getCatNames: function() {
+      var catNameList = catArray
+    }
+
+    init: function() {
+      view1.init();
+    }
+  };
+
+
+  var view1 = {
+    init: function (){
+
+    }
+
+  };
+
+  var view2 = {
+    init: function (){
+
+    }
+  };
+
+  octopus.init();
+}());
 
 
 
-//Array of objects. Objects are cat photo information
-[{
-  name: 'Cat',
-  clickCount: 0,
-  imageUrl:
-}
-]
+
 
 
 app loads
