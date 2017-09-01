@@ -1,3 +1,35 @@
+$(function(){
+
+  var model = {
+    init: function(){
+      //not sure what to init
+    }
+  },
+  var catArray = [{
+    name: 'Bella',
+    clickCount: 0
+    imageUrl:'images/bella.jpg'
+  },
+  {
+    name: 'Charles',
+    clickCount: 0
+    imageUrl: 'images/charles.jpg'
+  },
+  {
+    name: 'Loretta',
+    clickCount: 0
+    imageUrl: 'images/jack.jpg'
+  },
+  {
+    name: 'Tyler',
+    clickCount: 0
+    imageUrl:'images/Tyler.jpg'
+  }
+  ]
+})
+
+
+
 //Array of objects. Objects are cat photo information
 [{
   name: 'Cat',
