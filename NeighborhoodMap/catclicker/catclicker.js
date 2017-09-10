@@ -1,10 +1,56 @@
-//Array of objects. Objects are cat photo information
-[{
-  name: 'Cat',
-  clickCount: 0,
-  imageUrl:
-}
-]
+$(function(){
+  var catArray = [{
+    name: 'Bella',
+    clickCount: 0
+    imageUrl:'images/bella.jpg'
+  },
+  {
+    name: 'Charles',
+    clickCount: 0
+    imageUrl: 'images/charles.jpg'
+  },
+  {
+    name: 'Loretta',
+    clickCount: 0
+    imageUrl: 'images/jack.jpg'
+  },
+  {
+    name: 'Tyler',
+    clickCount: 0
+    imageUrl:'images/Tyler.jpg'
+  }
+  ];
+
+  var octopus = {
+    getCatNames: function() {
+      var catNameList = catArray
+    }
+
+    init: function() {
+      view1.init();
+    }
+  };
+
+
+  var view1 = {
+    init: function (){
+
+    }
+
+  };
+
+  var view2 = {
+    init: function (){
+
+    }
+  };
+
+  octopus.init();
+}());
+
+
+
+
 
 
 app loads
