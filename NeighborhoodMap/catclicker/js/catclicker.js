@@ -52,6 +52,19 @@ function init(){
 }
 
 // VIEW
+function showCatList(){
+
+}
+
+function showFirstCat(){
+
+}
+
+function showCatClickCount(){
+
+}
+
+
 function catCountBella(){
   var photobella = document.getElementById("clicker-bella");
   var counterbella = document.getElementById("counter-bella");
