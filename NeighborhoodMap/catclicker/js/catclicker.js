@@ -1,82 +1,46 @@
-$(function(){
-
-  var model = {
-    init: function(){
-      //not sure what to init
-    }
-  },
-  var catArray = [{
-    name: '',
+// MODEL
+var catArray = [{
+    name: 'Bella',
     clickCount: 0
-    imageUrl:
+    imageUrl:'images/bella.jpg'
   },
   {
-    name: '',
+    name: 'Charles',
     clickCount: 0
-    imageUrl:
+    imageUrl: 'images/charles.jpg'
   },
   {
-    name: '',
+    name: 'Loretta',
     clickCount: 0
-    imageUrl:
+    imageUrl: 'images/jack.jpg'
   },
   {
-    name: '',
+    name: 'Tyler',
     clickCount: 0
-    imageUrl:
-  },
-  {
-    name: '',
-    clickCount: 0
-    imageUrl:
+    imageUrl:'images/Tyler.jpg'
   }
-  ]
-})
+  ];
 
+// OCTOPUS
+  var octopus = {
+    getCatNames: function() {
+      var catNameList = catArray
+    }
 
+    init: function() {
+      view1.init();
+    }
+  };
 
-//Array of objects. Objects are cat photo information
-[{
-  name: 'Cat',
-  clickCount: 0,
-  imageUrl:
+// VIEW
+
+function catCountBella(){
+  var photobella = document.getElementById("clicker-bella");
+  var counterbella = document.getElementById("counter-bella");
+  countbella = parseInt(counterbella.textContent);
+  countbella += 1;
+  counterbella.innerHTML = countbella;
 }
-]
 
-
-app loads
-create list
-list view populates with cats
-
-change current cat in model
-
-click on cat picture
--track clicking
--first in model
--then in view
-
-click on list
-- change model
--current cat reset
--tell view to rerender
-
-
-view 1 = list of cats
-
-view 2 = cat details
-
-
-
-
-
-// //onClick() is a listener for click events registered using addEventListener()
-
-// function onClick() {
-//     var counter = document.getElementById("counter");
-//     counter.firstChild.nodeValue += 1;
-//   }
-
-
-// var el = document.getElementById("cat");
-// el.addEventListener("click", onClick);
-
+var photobella = document.getElementById("clicker-bella");
+photobella.addEventListener("click", catCountBella);
