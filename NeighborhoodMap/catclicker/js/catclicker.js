@@ -43,10 +43,11 @@ function getCatName(){
 }
 
 function updateCatClickCount(){
-  var count = document.getElementById("counter");
+  var counter = document.getElementById("counter");
   count = parseInt(counter.textContent);
   count += 1;
-  return model.catArray[model.currentCat].clickCount = count;
+  model.catArray[model.currentCat].clickCount = count;
+  showCat();
 }
 
 function getCurrentCat(){
@@ -55,8 +56,8 @@ function getCurrentCat(){
 
 //This is his funciton. I currently have this within showCatList(). cat is an object you pass in.
 
-function setCurrentCat(cat){
-  model.currentCat = cat;
+function setCurrentCat(i){
+  model.currentCat = i;
 }
 
 function init(){
@@ -90,14 +91,14 @@ function showCat(){
   var catclickcount = document.getElementById("counter")
   catimg.src = getCatImage();
   catname.innerHTML = getCatName();
-  catclickcount.innerHTML = getCatClickCount();
+  catclickcount.innerHTML = model.catArray[model.currentCat].clickCount;
 }
 
 
 //Tie the clicker element to the octopus updateCatClickCount function
-function catClick(currentCat){
+function catClick(){
   var clicker = document.getElementById("clicker");
-  updateCatClickCount(currentCat);
+  updateCatClickCount();
 }
 
 //Click on cat picture to increment count
