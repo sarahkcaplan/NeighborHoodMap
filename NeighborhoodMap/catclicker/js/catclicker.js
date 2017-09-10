@@ -30,27 +30,27 @@ function getListOfCats(){
   return model.catArray;
 }
 
-function getCatClickCount(currentCat){
-  return model.catArray[currentCat].clickCount;
+function getCatClickCount(){
+  return model.catArray[model.currentCat].clickCount;
 }
 
-function getCatImage(currentCat){
-  return model.catArray[currentCat].imageUrl;
+function getCatImage(){
+  return model.catArray[model.currentCat].imageUrl;
 }
 
-function getCatName(currentCat){
-  return model.catArray[currentCat].name;
+function getCatName(){
+  return model.catArray[model.currentCat].name;
 }
 
-function updateCatClickCount(currentCat){
+function updateCatClickCount(){
   var count = document.getElementById("counter");
   count = parseInt(counter.textContent);
   count += 1;
-  return model.catArray[currentCat].clickCount = count;
+  return model.catArray[model.currentCat].clickCount = count;
 }
 
 function getCurrentCat(){
-  return model.currentCat;
+  return model.currentCat
 }
 
 //This is his funciton. I currently have this within showCatList(). cat is an object you pass in.
@@ -59,7 +59,7 @@ function setCurrentCat(cat){
 }
 
 function init(){
-  model.currentCat = model.catArray[0];
+  model.currentCat = 0;
   showCatList();
   showCat();
 }
@@ -83,13 +83,13 @@ function showCatList(){
 }
 
 function showCat(){
-  var currentCat = model.getCurrentCat();
+  var currentCat = getCurrentCat();
   var catimg = document.getElementById("cat-image");
   var catname = document.getElementById("cat-name")
   var catclickcount = document.getElementById("counter")
-  catimg.src = getCatImage(currentCat);
-  catname.innerHTML = getCatName(currentCat);
-  catclickcount.innerHTML = getCatClickCount(currentCat);
+  catimg.src = getCatImage();
+  catname.innerHTML = getCatName();
+  catclickcount.innerHTML = getCatClickCount();
 }
 
 
