@@ -22,18 +22,31 @@ var catArray = [{
   ];
 
 // OCTOPUS
-  var octopus = {
-    getCatNames: function() {
-      var catNameList = catArray
-    }
+function getListOfCats(){
 
-    init: function() {
-      view1.init();
-    }
-  };
+}
+
+function getFirstCat(){
+
+}
+
+function getCatClickCount(){
+//might not need this one. might refactor and collapse into updateCatClickCount
+}
+
+function updateCatClickCount(){
+
+}
+
+function getCat(){
+
+}
+
+function init(){
+
+}
 
 // VIEW
-
 function catCountBella(){
   var photobella = document.getElementById("clicker-bella");
   var counterbella = document.getElementById("counter-bella");
