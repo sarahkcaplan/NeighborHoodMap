@@ -32,7 +32,6 @@ function getFirstCat(){
 }
 
 function getCatClickCount(currentCat){
-//might not need this one. might refactor and collapse into updateCatClickCount
   return catArray[currentCat].clickCount;
 }
 
@@ -64,10 +63,6 @@ function showCatList(){
 
 }
 
-function showFirstCat(){
-
-}
-
 function showCat(currentCat){
   var catimg = document.getElementById("cat-image");
   var catname = document.getElementById("cat-name")
@@ -77,14 +72,8 @@ function showCat(currentCat){
   catclickcount.innerHTML = getCatClickCount(currentCat);
 }
 
-function showCat(currentCat){
-  var catimg = document.getElementById("cat-image");
-  catimg.src = getCatImage(currentCat);
-}
-
-function showCatClickCount(){
-  var clickcount = document.getElementById("counter");
-
+function showFirstCat(){
+  return showCat(0);
 }
 
 
