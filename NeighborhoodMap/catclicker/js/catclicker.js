@@ -60,6 +60,11 @@ function init(){
 
 // VIEW
 function showCatList(){
+  //this will probably have the closure issue
+  var ul = document.getElementByTagNmae("ul");
+  for (var i = 0; i < catArray.length; i++){
+    ul.innerHTML = "<li></li>"
+  }
 
 }
 
@@ -73,17 +78,34 @@ function showCat(currentCat){
 }
 
 function showFirstCat(){
-  return showCat(0);
+   showCat(0);
+   //instead of this maybe just run showCat(0); on init.
 }
 
-
-function catCountBella(){
-  var photobella = document.getElementById("clicker-bella");
-  var counterbella = document.getElementById("counter-bella");
-  countbella = parseInt(counterbella.textContent);
-  countbella += 1;
-  counterbella.innerHTML = countbella;
+function catClick(currentCat){
+  var clicker = document.getElementById("clicker");
+  updateCatClickCount(currentCat);
 }
 
-var photobella = document.getElementById("clicker-bella");
-photobella.addEventListener("click", catCountBella);
+var clicker = document.getElementById("clicker");
+clicker.addEventListener("click", catClick);
+
+function pickCat(){
+
+}
+
+var pickedcat = document.getElementById("")//need to know
+
+
+
+
+// function catCountBella(){
+//   var photobella = document.getElementById("clicker-bella");
+//   var counterbella = document.getElementById("counter-bella");
+//   countbella = parseInt(counterbella.textContent);
+//   countbella += 1;
+//   counterbella.innerHTML = countbella;
+// }
+
+// var photobella = document.getElementById("clicker-bella");
+// photobella.addEventListener("click", catCountBella);
