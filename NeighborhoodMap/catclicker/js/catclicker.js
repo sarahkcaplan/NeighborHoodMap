@@ -68,10 +68,18 @@ function showFirstCat(){
 
 }
 
-function showCat(){
-  var catsrc = document.getElementById("cat-image");
+function showCat(currentCat){
+  var catimg = document.getElementById("cat-image");
   var catname = document.getElementById("cat-name")
-  catsrc =
+  var catclickcount = document.getElementById("counter")
+  catimg.src = getCatImage(currentCat);
+  catname.innerHTML = getCatName(currentCat);
+  catclickcount.innerHTML = getCatClickCount(currentCat);
+}
+
+function showCat(currentCat){
+  var catimg = document.getElementById("cat-image");
+  catimg.src = getCatImage(currentCat);
 }
 
 function showCatClickCount(){
