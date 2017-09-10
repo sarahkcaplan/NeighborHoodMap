@@ -54,6 +54,7 @@ function getCurrentCat(){
 }
 
 //This is his funciton. I currently have this within showCatList(). cat is an object you pass in.
+
 function setCurrentCat(cat){
   model.currentCat = cat;
 }
@@ -72,12 +73,12 @@ function showCatList(){
     var cat = cats[i];
     var li = document.createElement('li');
     li.textContent = cat.name;
-    li.addEventListener("click", (function(cat){
+    li.addEventListener("click", (function(i){
       return function() {
-        setCurrentCat(cat);
+        setCurrentCat(i);
         showCat();
       };
-    })(cat));
+    })(i));
     ul.appendChild(li);
   }
 }
