@@ -50,22 +50,25 @@ function updateCatClickCount(currentCat){
   return catArray[currentCat].clickCount = count;
 }
 
-function getCurrentCat(){
-
+function getCurrentCat(cat){
+  currentCat = cat;
 }
 
 function init(){
-
+  showCatList();
+  showCat(getFirstCat());
 }
 
 // VIEW
 function showCatList(){
   //this will probably have the closure issue
-  var ul = document.getElementByTagNmae("ul");
+  var ul = document.getElementByTagName("ul");
   for (var i = 0; i < catArray.length; i++){
-    ul.innerHTML = "<li></li>"
+    var cat = catArray[i];
+    var li = document.createElement('li');
+    li.textContent = cat.name
+    ul.innerHTML = li.textContent;
   }
-
 }
 
 function showCat(currentCat){
@@ -77,26 +80,25 @@ function showCat(currentCat){
   catclickcount.innerHTML = getCatClickCount(currentCat);
 }
 
-function showFirstCat(){
-   showCat(0);
-   //instead of this maybe just run showCat(0); on init.
-}
 
+//Tie the clicker element to the octopus updateCatClickCount function
 function catClick(currentCat){
   var clicker = document.getElementById("clicker");
   updateCatClickCount(currentCat);
 }
 
+//Click on cat picture to increment count
 var clicker = document.getElementById("clicker");
 clicker.addEventListener("click", catClick);
 
-function pickCat(){
+//Click on cat in list to get current cat
+li.addEventListener("click", (function(cat){
+  return function() {
+    showCat(getCurrentCat(cat));
+  };
+}));
 
-}
-
-var pickedcat = document.getElementById("")//need to know
-
-
+init();
 
 
 // function catCountBella(){
