@@ -30,10 +30,6 @@ function getListOfCats(){
   return model.catArray;
 }
 
-function getFirstCat(){
-  return model.currentCat = model.catArray[0];
-}
-
 function getCatClickCount(currentCat){
   return model.catArray[currentCat].clickCount;
 }
@@ -63,8 +59,9 @@ function setCurrentCat(cat){
 }
 
 function init(){
+  model.currentCat = model.catArray[0];
   showCatList();
-  showCat(0);
+  showCat();
 }
 
 // VIEW
@@ -81,6 +78,7 @@ function showCatList(){
         showCat();
       };
     })(cat));
+    ul.appendChild(li);
   }
 }
 
