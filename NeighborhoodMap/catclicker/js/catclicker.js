@@ -24,23 +24,31 @@ var catArray = [{
 
 // OCTOPUS
 function getListOfCats(){
-  catArray;
+  return catArray;
 }
 
 function getFirstCat(){
-  currentCat = catArray[0];
+  return currentCat = catArray[0];
 }
 
 function getCatClickCount(currentCat){
 //might not need this one. might refactor and collapse into updateCatClickCount
-  catArray[currentCat].clickCount;
+  return catArray[currentCat].clickCount;
+}
+
+function getCatImage(currentCat){
+  return catArray[currentCat].imageUrl;
+}
+
+function getCatName(currentCat){
+  return catArray[currentCat].name;
 }
 
 function updateCatClickCount(currentCat){
-  var count document.getElementById("counter");
+  var count = document.getElementById("counter");
   count = parseInt(counter.textContent);
   count += 1;
-  catArray[currentCat].clickCount = count;
+  return catArray[currentCat].clickCount = count;
 }
 
 function getCurrentCat(){
@@ -60,7 +68,14 @@ function showFirstCat(){
 
 }
 
+function showCat(){
+  var catsrc = document.getElementById("cat-image");
+  var catname = document.getElementById("cat-name")
+  catsrc =
+}
+
 function showCatClickCount(){
+  var clickcount = document.getElementById("counter");
 
 }
 
