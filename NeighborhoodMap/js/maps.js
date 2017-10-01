@@ -16,4 +16,9 @@ function hongKong(){
     zoom: 8,
     center: hk
   });
+
+  var marker = new google.maps.Marker({
+    position: hk,
+    map: map
+  })
 }
